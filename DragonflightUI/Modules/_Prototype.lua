@@ -20,7 +20,7 @@ local options = {
     args = {
         toggle = {
             type = 'toggle',
-            name = 'Enable',
+            name = '启用',
             get = function()
                 return DF:GetModuleEnabled(mName)
             end,
@@ -32,7 +32,7 @@ local options = {
         reload = {
             type = 'execute',
             name = '/reload',
-            desc = 'reloads UI',
+            desc = '重新加载界面',
             func = function()
                 ReloadUI()
             end,

@@ -135,31 +135,31 @@ local function setOption(info, value)
 end
 
 local optionsPlayer = {
-    name = 'Player',
-    desc = 'PlayerframeDesc',
+    name = '玩家',
+    desc = '玩家框架设置',
     get = getOption,
     set = setOption,
     type = 'group',
     args = {
         configGeneral = {
             type = 'header',
-            name = 'General',
+            name = '常规',
             order = 10
         },
         classcolor = {
             type = 'toggle',
-            name = 'class color',
-            desc = 'Enable classcolors for the healthbar',
+            name = '职业颜色',
+            desc = '为玩家血条启用职业颜色',
             order = 10.1
         },
         configSize = {
             type = 'header',
-            name = 'Size',
+            name = '大小',
             order = 50
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale', 'player'),
             min = 0.1,
             max = 3,
@@ -168,54 +168,54 @@ local optionsPlayer = {
         },
         configPos = {
             type = 'header',
-            name = 'Position',
+            name = '位置',
             order = 100
         },
         override = {
             type = 'toggle',
-            name = 'Override',
-            desc = 'Override positions',
+            name = '覆盖位置',
+            desc = '覆盖默认位置设置',
             order = 101,
             width = 'full'
         },
         anchor = {
             type = 'select',
-            name = 'Anchor',
-            desc = 'Anchor' .. getDefaultStr('anchor', 'player'),
+            name = '锚点',
+            desc = '锚点' .. getDefaultStr('anchor', 'player'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105
         },
         anchorParent = {
             type = 'select',
-            name = 'AnchorParent',
-            desc = 'AnchorParent' .. getDefaultStr('anchorParent', 'player'),
+            name = '锚点父级',
+            desc = '锚点父级' .. getDefaultStr('anchorParent', 'player'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105.1
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to *ANCHOR*' .. getDefaultStr('x', 'player'),
+            name = 'X轴',
+            desc = '相对于锚点的X坐标' .. getDefaultStr('x', 'player'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -223,8 +223,8 @@ local optionsPlayer = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to *ANCHOR*' .. getDefaultStr('y', 'player'),
+            name = 'Y轴',
+            desc = '相对于锚点的Y坐标' .. getDefaultStr('y', 'player'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -234,31 +234,31 @@ local optionsPlayer = {
 }
 
 local optionsTarget = {
-    name = 'Target',
-    desc = 'TargetFrameDesc',
+    name = '目标',
+    desc = '目标框架设置',
     get = getOption,
     set = setOption,
     type = 'group',
     args = {
         configGeneral = {
             type = 'header',
-            name = 'General',
+            name = '常规',
             order = 10
         },
         classcolor = {
             type = 'toggle',
-            name = 'class color',
-            desc = 'Enable classcolors for the healthbar',
+            name = '职业颜色',
+            desc = '为目标血条启用职业颜色',
             order = 10.1
         },
         configSize = {
             type = 'header',
-            name = 'Size',
+            name = '大小',
             order = 50
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale', 'target'),
             min = 0.1,
             max = 3,
@@ -267,54 +267,54 @@ local optionsTarget = {
         },
         configPos = {
             type = 'header',
-            name = 'Position',
+            name = '位置',
             order = 100
         },
         override = {
             type = 'toggle',
-            name = 'Override',
-            desc = 'Override positions',
+            name = '覆盖位置',
+            desc = '覆盖默认位置设置',
             order = 101,
             width = 'full'
         },
         anchor = {
             type = 'select',
-            name = 'Anchor',
-            desc = 'Anchor' .. getDefaultStr('anchor', 'target'),
+            name = '锚点',
+            desc = '锚点' .. getDefaultStr('anchor', 'target'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105
         },
         anchorParent = {
             type = 'select',
-            name = 'AnchorParent',
-            desc = 'AnchorParent' .. getDefaultStr('anchorParent', 'target'),
+            name = '锚点父级',
+            desc = '锚点父级' .. getDefaultStr('anchorParent', 'target'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105.1
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to *ANCHOR*' .. getDefaultStr('x', 'target'),
+            name = 'X轴',
+            desc = '相对于锚点的X坐标' .. getDefaultStr('x', 'target'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -322,8 +322,8 @@ local optionsTarget = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to *ANCHOR*' .. getDefaultStr('y', 'target'),
+            name = 'Y轴',
+            desc = '相对于锚点的Y坐标' .. getDefaultStr('y', 'target'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -333,31 +333,31 @@ local optionsTarget = {
 }
 
 local optionsFocus = {
-    name = 'Focus',
-    desc = 'FocusFrameDesc',
+    name = '焦点',
+    desc = '焦点框架设置',
     get = getOption,
     set = setOption,
     type = 'group',
     args = {
         configGeneral = {
             type = 'header',
-            name = 'General',
+            name = '常规',
             order = 10
         },
         classcolor = {
             type = 'toggle',
-            name = 'class color',
-            desc = 'Enable classcolors for the healthbar',
+            name = '职业颜色',
+            desc = '为焦点血条启用职业颜色',
             order = 10.1
         },
         configSize = {
             type = 'header',
-            name = 'Size',
+            name = '大小',
             order = 50
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale', 'focus'),
             min = 0.1,
             max = 3,
@@ -366,54 +366,54 @@ local optionsFocus = {
         },
         configPos = {
             type = 'header',
-            name = 'Position',
+            name = '位置',
             order = 100
         },
         override = {
             type = 'toggle',
-            name = 'Override',
-            desc = 'Override positions',
+            name = '覆盖位置',
+            desc = '覆盖默认位置设置',
             order = 101,
             width = 'full'
         },
         anchor = {
             type = 'select',
-            name = 'Anchor',
-            desc = 'Anchor' .. getDefaultStr('anchor', 'focus'),
+            name = '锚点',
+            desc = '锚点' .. getDefaultStr('anchor', 'focus'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105
         },
         anchorParent = {
             type = 'select',
-            name = 'AnchorParent',
-            desc = 'AnchorParent' .. getDefaultStr('anchorParent', 'focus'),
+            name = '锚点父级',
+            desc = '锚点父级' .. getDefaultStr('anchorParent', 'focus'),
             values = {
-                ['TOP'] = 'TOP',
-                ['RIGHT'] = 'RIGHT',
-                ['BOTTOM'] = 'BOTTOM',
-                ['LEFT'] = 'LEFT',
-                ['TOPRIGHT'] = 'TOPRIGHT',
-                ['TOPLEFT'] = 'TOPLEFT',
-                ['BOTTOMLEFT'] = 'BOTTOMLEFT',
-                ['BOTTOMRIGHT'] = 'BOTTOMRIGHT',
-                ['CENTER'] = 'CENTER'
+                ['TOP'] = '上',
+                ['RIGHT'] = '右',
+                ['BOTTOM'] = '下',
+                ['LEFT'] = '左',
+                ['TOPRIGHT'] = '右上',
+                ['TOPLEFT'] = '左上',
+                ['BOTTOMLEFT'] = '左下',
+                ['BOTTOMRIGHT'] = '右下',
+                ['CENTER'] = '中心'
             },
             order = 105.1
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to *ANCHOR*' .. getDefaultStr('x', 'focus'),
+            name = 'X轴',
+            desc = '相对于锚点的X坐标' .. getDefaultStr('x', 'focus'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -421,8 +421,8 @@ local optionsFocus = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to *ANCHOR*' .. getDefaultStr('y', 'focus'),
+            name = 'Y轴',
+            desc = '相对于锚点的Y坐标' .. getDefaultStr('y', 'focus'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -433,13 +433,13 @@ local optionsFocus = {
 
 local options = {
     type = 'group',
-    name = 'DragonflightUI - ' .. mName,
+    name = 'DragonflightUI - 单位框体',
     get = getOption,
     set = setOption,
     args = {
         toggle = {
             type = 'toggle',
-            name = 'Enable',
+            name = '启用',
             get = function()
                 return DF:GetModuleEnabled(mName)
             end,
@@ -451,7 +451,7 @@ local options = {
         reload = {
             type = 'execute',
             name = '/reload',
-            desc = 'reloads UI',
+            desc = '重新加载界面',
             func = function()
                 ReloadUI()
             end,
@@ -459,8 +459,8 @@ local options = {
         },
         defaults = {
             type = 'execute',
-            name = 'Defaults',
-            desc = 'Sets Config to default values',
+            name = '默认值',
+            desc = '将配置重置为默认值',
             func = setDefaultValues,
             order = 1.1
         },
@@ -2070,7 +2070,7 @@ function Module.ChangeFocusFrame()
         local t = FocusFrameHealthBarDummy:CreateFontString('FocusFrameHealthBarText', 'OVERLAY', 'TextStatusBarText')
 
         t:SetPoint('CENTER', FocusFrameHealthBarDummy, 0, 0)
-        t:SetText('HP')
+        t:SetText('生命值')
         t:Hide()
         frame.FocusFrameHealthBarText = t
 
@@ -2112,7 +2112,7 @@ function Module.ChangeFocusFrame()
         local t = FocusFrameManaBarDummy:CreateFontString('FocusFrameManaBarText', 'OVERLAY', 'TextStatusBarText')
 
         t:SetPoint('CENTER', FocusFrameManaBarDummy, -dx, 0)
-        t:SetText('MANA')
+        t:SetText('法力')
         t:Hide()
         frame.FocusFrameManaBarText = t
 

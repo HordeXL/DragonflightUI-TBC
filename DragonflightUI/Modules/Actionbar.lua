@@ -44,13 +44,13 @@ end
 
 local options = {
     type = 'group',
-    name = 'DragonflightUI - ' .. mName,
+    name = 'DragonflightUI - 动作条',
     get = getOption,
     set = setOption,
     args = {
         toggle = {
             type = 'toggle',
-            name = 'Enable',
+            name = '启用',
             get = function()
                 return DF:GetModuleEnabled(mName)
             end,
@@ -62,7 +62,7 @@ local options = {
         reload = {
             type = 'execute',
             name = '/reload',
-            desc = 'reloads UI',
+            desc = '重新加载界面',
             func = function()
                 ReloadUI()
             end,
@@ -70,19 +70,19 @@ local options = {
         },
         defaults = {
             type = 'execute',
-            name = 'Defaults',
-            desc = 'Sets Config to default values',
+            name = '默认值',
+            desc = '将配置重置为默认值',
             func = setDefaultValues,
             order = 1.1
         },
         config = {
             type = 'header',
-            name = 'Config - Actionbar',
+            name = '配置 - 动作条',
             order = 100
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale'),
             min = 0.2,
             max = 1.5,
@@ -92,8 +92,8 @@ local options = {
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to BOTTOM CENTER' .. getDefaultStr('x'),
+            name = 'X轴',
+            desc = '相对于屏幕底部中心的X坐标' .. getDefaultStr('x'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -102,8 +102,8 @@ local options = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to BOTTOM CENTER' .. getDefaultStr('y'),
+            name = 'Y轴',
+            desc = '相对于屏幕底部中心的Y坐标' .. getDefaultStr('y'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -112,32 +112,32 @@ local options = {
         },
         showGryphon = {
             type = 'toggle',
-            name = 'Show Gryphon Art',
-            desc = 'Shows/Hides Gryphon Art on the side' .. getDefaultStr('showGryphon'),
+            name = '显示狮鹫艺术图',
+            desc = '显示/隐藏侧边的狮鹫艺术图' .. getDefaultStr('showGryphon'),
             order = 105.1
         },
         changeSides = {
             type = 'toggle',
-            name = 'Change Right Bar 1+2',
-            desc = 'Moves the Right Bar 1 + 2 to the side of the mainbar ' .. getDefaultStr('changeSides'),
+            name = '更改右侧动作条1+2',
+            desc = '将右侧动作条1+2移动到主动作条旁边 ' .. getDefaultStr('changeSides'),
             order = 105.2
         },
         config = {
             type = 'header',
-            name = 'Config - XP/Reputation Bar',
+            name = '配置 - 经验/声望条',
             order = 200
         },
         alwaysShowXP = {
             type = 'toggle',
-            name = 'Always show XP Text',
-            desc = 'Set to always show text on XP bar' .. getDefaultStr('alwaysShowXP'),
+            name = '始终显示经验值文本',
+            desc = '设置为始终在经验条上显示文本' .. getDefaultStr('alwaysShowXP'),
             order = 201,
             width = '2'
         },
         alwaysShowRep = {
             type = 'toggle',
-            name = 'Always show Reputation Text',
-            desc = 'Set to always show text on Reputation bar' .. getDefaultStr('alwaysShowRep'),
+            name = '始终显示声望文本',
+            desc = '设置为始终在声望条上显示文本' .. getDefaultStr('alwaysShowRep'),
             order = 201,
             width = '4'
         }

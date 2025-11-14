@@ -64,7 +64,7 @@ function DF:ShowStartMessage()
         version = GetAddOnMetadata('DragonflightUI', 'Version')
     end
 
-    self:Print(version .. " loaded! Type '/dragonflight'or '/df' to open the options menu.")
+    self:Print(version .. " 已加载！输入'/dragonflight'或'/df'打开选项菜单。")
 end
 
 function DF:GetClassColor(class, alpha)

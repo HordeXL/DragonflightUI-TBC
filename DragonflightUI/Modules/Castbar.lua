@@ -40,13 +40,13 @@ end
 
 local options = {
     type = 'group',
-    name = 'DragonflightUI - ' .. mName,
+    name = 'DragonflightUI - 施法条',
     get = getOption,
     set = setOption,
     args = {
         toggle = {
             type = 'toggle',
-            name = 'Enable',
+            name = '启用',
             get = function()
                 return DF:GetModuleEnabled(mName)
             end,
@@ -58,7 +58,7 @@ local options = {
         reload = {
             type = 'execute',
             name = '/reload',
-            desc = 'reloads UI',
+            desc = '重新加载界面',
             func = function()
                 ReloadUI()
             end,
@@ -66,19 +66,19 @@ local options = {
         },
         defaults = {
             type = 'execute',
-            name = 'Defaults',
-            desc = 'Sets Config to default values',
+            name = '默认值',
+            desc = '将配置重置为默认值',
             func = setDefaultValues,
             order = 1.1
         },
         config = {
             type = 'header',
-            name = 'Config - Player',
+            name = '配置 - 施法条',
             order = 100
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale'),
             min = 0.2,
             max = 1.5,
@@ -88,8 +88,8 @@ local options = {
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to BOTTOM CENTER' .. getDefaultStr('x'),
+            name = 'X轴',
+            desc = '相对于屏幕底部中心的X坐标' .. getDefaultStr('x'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -97,8 +97,8 @@ local options = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to BOTTOM CENTER' .. getDefaultStr('y'),
+            name = 'Y轴',
+            desc = '相对于屏幕底部中心的Y坐标' .. getDefaultStr('y'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -106,7 +106,7 @@ local options = {
         },
         preci = {
             type = 'range',
-            name = 'Precision (time left)',
+            name = '精度 (剩余时间)',
             desc = '...' .. getDefaultStr('preci'),
             min = 0,
             max = 3,
@@ -115,7 +115,7 @@ local options = {
         },
         preciMax = {
             type = 'range',
-            name = 'Precision (time max)',
+            name = '精度 (最大时间)',
             desc = '...' .. getDefaultStr('preciMax'),
             min = 0,
             max = 3,

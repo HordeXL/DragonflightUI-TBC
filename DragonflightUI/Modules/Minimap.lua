@@ -36,13 +36,13 @@ end
 
 local options = {
     type = 'group',
-    name = 'DragonflightUI - ' .. mName,
+    name = 'DragonflightUI - 小地图',
     get = getOption,
     set = setOption,
     args = {
         toggle = {
             type = 'toggle',
-            name = 'Enable',
+            name = '启用',
             get = function()
                 return DF:GetModuleEnabled(mName)
             end,
@@ -54,7 +54,7 @@ local options = {
         reload = {
             type = 'execute',
             name = '/reload',
-            desc = 'reloads UI',
+            desc = '重新加载界面',
             func = function()
                 ReloadUI()
             end,
@@ -62,19 +62,19 @@ local options = {
         },
         defaults = {
             type = 'execute',
-            name = 'Defaults',
-            desc = 'Sets Config to default values',
+            name = '默认值',
+            desc = '将配置重置为默认值',
             func = setDefaultValues,
             order = 1.1
         },
         config = {
             type = 'header',
-            name = 'Config - Player',
+            name = '配置 - 小地图',
             order = 100
         },
         scale = {
             type = 'range',
-            name = 'Scale',
+            name = '缩放',
             desc = '' .. getDefaultStr('scale'),
             min = 0.2,
             max = 1.5,
@@ -84,8 +84,8 @@ local options = {
         },
         x = {
             type = 'range',
-            name = 'X',
-            desc = 'X relative to TOPRIGHT' .. getDefaultStr('x'),
+            name = 'X轴',
+            desc = '相对于屏幕右上角的X坐标' .. getDefaultStr('x'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
@@ -93,8 +93,8 @@ local options = {
         },
         y = {
             type = 'range',
-            name = 'Y',
-            desc = 'Y relative to TOPRIGHT' .. getDefaultStr('y'),
+            name = 'Y轴',
+            desc = '相对于屏幕右上角的Y坐标' .. getDefaultStr('y'),
             min = -2500,
             max = 2500,
             bigStep = 0.50,
